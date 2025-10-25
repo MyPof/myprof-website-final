@@ -937,6 +937,48 @@
             margin-top: 1rem;
         }
 
+        /* Contact form styles */
+        .contact-form {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .contact-form .form-control {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+        }
+
+        .contact-form textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -970,6 +1012,7 @@
             .form-card { padding: 2rem; }
             .footer-content { grid-template-columns: 1fr; text-align: center; }
             .footer-col h4:after { left: 50%; transform: translateX(-50%); }
+            .contact-form { padding: 1.5rem; }
         }
 
         @media (max-width: 576px) {
@@ -1012,16 +1055,6 @@
         .add-tag-input {
             flex: 1;
         }
-
-        /* Contact form styles */
-        .contact-form {
-            background-color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--card-shadow);
-            max-width: 500px;
-            margin: 0 auto;
-        }
     </style>
 </head>
 <body>
@@ -1039,6 +1072,7 @@
                     <li><a href="#teachers">Trouver un enseignant</a></li>
                     <li><a href="#registration">Inscription</a></li>
                     <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li id="loginNavItem"><a href="#" onclick="openLoginModal()">Connexion</a></li>
                     <li id="profileNavItem" style="display: none;"><a href="#profile">Mon profil</a></li>
@@ -1146,7 +1180,8 @@
                 </div>
             </div>
             <div class="teacher-list" id="teacherList">
-                </div>
+                <!-- Les enseignants seront ajoutés dynamiquement -->
+            </div>
         </div>
     </section>
     
@@ -1180,47 +1215,64 @@
         </div>
     </section>
 
-    <section id="contact">
+    <!-- NOUVELLE SECTION CONTACT AVEC FORMULAIRE FONCTIONNEL -->
+    <section id="contact" class="light">
         <div class="container">
             <h2 class="section-title">Contactez-nous</h2>
-            <p class="section-subtitle">Une question, un problème ou une suggestion ? N'hésitez pas à nous contacter.</p>
+            <p class="section-subtitle">Une question, un problème ou une suggestion ? Notre équipe vous répond sous 24h.</p>
             
             <div class="contact-form">
-                <div class="form-group">
-                    <label for="contactReason">Raison du contact</label>
-                    <select id="contactReason" class="form-control">
-                        <option value="">Sélectionnez une raison</option>
-                        <option value="support">Support technique</option>
-                        <option value="question">Question générale</option>
-                        <option value="partnership">Partenariat</option>
-                        <option value="complaint">Réclamation</option>
-                        <option value="other">Autre</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="contactName">Votre nom</label>
-                    <input type="text" id="contactName" class="form-control" placeholder="Votre nom complet">
-                </div>
-                
-                <div class="form-group">
-                    <label for="contactEmail">Votre email</label>
-                    <input type="email" id="contactEmail" class="form-control" placeholder="Votre adresse email">
-                </div>
-                
-                <div class="form-group">
-                    <label for="contactMessage">Votre message</label>
-                    <textarea id="contactMessage" class="form-control" rows="5" placeholder="Décrivez votre demande en détail..."></textarea>
-                </div>
-                
-                <button class="btn btn-primary" onclick="sendContactMessage()">
-                    <i class="fas fa-paper-plane"></i> Envoyer le message
-                </button>
+                <form action="https://formsubmit.co/myprofeduc@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nouveau message MyProfEduc">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label for="contactName">Votre nom complet</label>
+                        <input type="text" id="contactName" name="name" class="form-control" placeholder="Votre nom et prénom" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail">Votre email</label>
+                        <input type="email" id="contactEmail" name="email" class="form-control" placeholder="votre@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactReason">Sujet du message</label>
+                        <select id="contactReason" name="reason" class="form-control" required>
+                            <option value="">Choisissez un sujet</option>
+                            <option value="support">Support technique</option>
+                            <option value="question">Question générale</option>
+                            <option value="partnership">Partenariat</option>
+                            <option value="complaint">Réclamation</option>
+                            <option value="teacher-account">Problème compte enseignant</option>
+                            <option value="parent-account">Problème compte parent</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage">Votre message</label>
+                        <textarea id="contactMessage" name="message" class="form-control" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Envoyer mon message
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                        <i class="fas fa-shield-alt"></i> Vos données sont protégées et ne seront jamais partagées
+                    </p>
+                </form>
             </div>
             
-            <div class="text-center" style="margin-top: 2rem;">
-                <p>Vous pouvez aussi nous contacter directement par email :</p>
-                <p><i class="fas fa-envelope"></i> <strong>myprofeduc@gmail.com</strong></p>
+            <div class="text-center" style="margin-top: 3rem;">
+                <div style="background: var(--light-bg); padding: 2rem; border-radius: var(--border-radius);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Autres moyens de contact</h4>
+                    <p><i class="fas fa-envelope"></i> <strong>myprofeduc@gmail.com</strong></p>
+                    <p><i class="fas fa-phone"></i> <strong>01 23 45 67 89</strong> (Lun-Ven, 9h-18h)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Paris, France</strong></p>
+                </div>
             </div>
         </div>
     </section>
@@ -1571,6 +1623,7 @@
                         <a href="#teachers">Trouver un enseignant</a>
                         <a href="#registration">Devenir enseignant</a>
                         <a href="#about">À propos</a>
+                        <a href="#contact">Contact</a>
                         <a href="#faq">FAQ</a>
                     </div>
                 </div>
@@ -2062,27 +2115,6 @@
             faqItem.classList.toggle('active');
         }
 
-        // Fonction pour envoyer un message de contact
-        function sendContactMessage() {
-            const reason = document.getElementById('contactReason').value;
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const message = document.getElementById('contactMessage').value;
-            
-            if (!reason || !name || !email || !message) {
-                alert('Veuillez remplir tous les champs du formulaire de contact.');
-                return;
-            }
-            
-            alert('Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.');
-            
-            // Réinitialiser le formulaire
-            document.getElementById('contactReason').value = '';
-            document.getElementById('contactName').value = '';
-            document.getElementById('contactEmail').value = '';
-            document.getElementById('contactMessage').value = '';
-        }
-
         // Fonction pour renvoyer l'email de vérification
         function resendVerification() {
             alert('Email de vérification renvoyé !');
@@ -2129,5 +2161,3 @@
     </script>
 </body>
 </html>
-
-
