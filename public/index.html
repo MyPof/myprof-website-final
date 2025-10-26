@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyProfEduc - Cours Particuliers Simples et Efficaces</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-color: #4a6cf7;
@@ -18,8 +21,8 @@
             --text-light: #718096;
             --light-bg: #f8f9fa;
             --dark-bg: #1e293b;
-            --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            --hover-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
             --border-radius: 12px;
         }
@@ -116,14 +119,14 @@
         .btn-secondary {
             background-color: white;
             color: var(--primary-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid var(--primary-color);
         }
 
         .btn-secondary:hover {
             background-color: var(--light-bg);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .btn-accent {
@@ -166,7 +169,7 @@
         /* Header */
         header {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             padding: 1rem 0;
             position: sticky;
             top: 0;
@@ -175,7 +178,7 @@
         }
 
         .header-scrolled {
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             padding: 0.75rem 0;
         }
 
@@ -198,7 +201,7 @@
         .logo-icon {
             color: var(--accent-color);
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
@@ -227,11 +230,13 @@
             transition: var(--transition);
         }
 
-        nav ul li a:hover, nav ul li a.active {
+        nav ul li a:hover,
+        nav ul li a.active {
             color: var(--primary-color);
         }
 
-        nav ul li a:hover:after, nav ul li a.active:after {
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
             width: 100%;
         }
 
@@ -320,11 +325,11 @@
         section {
             padding: 5rem 0;
         }
-        
+
         section.light {
             background-color: white;
         }
-        
+
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -341,7 +346,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .feature-card:before {
             content: '';
             position: absolute;
@@ -352,12 +357,12 @@
             background: var(--primary-color);
             transition: var(--transition);
         }
-        
+
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--hover-shadow);
         }
-        
+
         .feature-card:hover:before {
             height: 100%;
         }
@@ -411,7 +416,8 @@
             color: var(--text-color);
         }
 
-        .filter-group input, .filter-group select {
+        .filter-group input,
+        .filter-group select {
             width: 100%;
             padding: 0.875rem 1rem;
             border: 1px solid #e2e8f0;
@@ -420,7 +426,8 @@
             transition: var(--transition);
         }
 
-        .filter-group input:focus, .filter-group select:focus {
+        .filter-group input:focus,
+        .filter-group select:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
@@ -478,7 +485,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
             padding: 1rem;
             color: white;
         }
@@ -491,7 +498,7 @@
 
         .teacher-subject {
             font-weight: 500;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             margin: 0;
         }
 
@@ -505,7 +512,7 @@
             margin-bottom: 0.75rem;
             color: var(--text-light);
         }
-        
+
         .teacher-details i {
             margin-right: 10px;
             color: var(--primary-color);
@@ -535,7 +542,7 @@
         #registration {
             background-color: white;
         }
-        
+
         .tabs {
             display: flex;
             justify-content: center;
@@ -547,7 +554,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .tab-btn {
             background: none;
             border: none;
@@ -559,13 +566,13 @@
             border-radius: 50px;
             transition: var(--transition);
         }
-        
+
         .tab-btn.active {
             background: white;
             color: var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .form-card {
             background-color: white;
             padding: 3rem;
@@ -578,14 +585,16 @@
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 0.875rem 1rem;
             border: 1px solid #e2e8f0;
@@ -594,7 +603,9 @@
             transition: var(--transition);
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
@@ -605,7 +616,7 @@
             color: var(--text-light);
             margin-top: 0.5rem;
         }
-        
+
         .password-validation li {
             list-style: none;
             display: flex;
@@ -613,16 +624,16 @@
             margin-bottom: 0.3rem;
             transition: var(--transition);
         }
-        
+
         .password-validation li.valid {
             color: var(--success-color);
         }
-        
+
         .password-validation li i {
             margin-right: 0.5rem;
             width: 16px;
         }
-        
+
         .password-strength-bar {
             height: 6px;
             background-color: #e2e8f0;
@@ -630,18 +641,18 @@
             margin-top: 0.5rem;
             overflow: hidden;
         }
-        
+
         .strength {
             height: 100%;
             width: 0;
             transition: var(--transition);
             background-color: var(--danger-color);
         }
-        
+
         .strength.medium {
             background-color: var(--accent-color);
         }
-        
+
         .strength.strong {
             background-color: var(--success-color);
         }
@@ -686,7 +697,7 @@
             margin-right: auto;
             box-shadow: var(--card-shadow);
         }
-        
+
         .profile-tab-btn {
             background: none;
             border: none;
@@ -698,11 +709,11 @@
             border-radius: 50px;
             transition: var(--transition);
         }
-        
+
         .profile-tab-btn.active {
             background: var(--primary-color);
             color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .profile-content {
@@ -812,7 +823,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             justify-content: center;
             align-items: center;
             padding: 1rem;
@@ -823,7 +834,7 @@
             background-color: white;
             padding: 2.5rem;
             border-radius: var(--border-radius);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             position: relative;
             max-width: 450px;
             width: 100%;
@@ -925,7 +936,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             transition: var(--transition);
         }
@@ -937,7 +948,7 @@
 
         .footer-bottom {
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .stats-reference {
@@ -990,45 +1001,132 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive */
         @media (max-width: 992px) {
-            .section-title { font-size: 2rem; }
-            .hero h1 { font-size: 2.75rem; }
-            .stats-container { gap: 2rem; }
-            .stat-number { font-size: 2rem; }
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            .stats-container {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .header-content { flex-direction: column; text-align: center; gap: 1rem; }
-            nav ul { flex-direction: column; gap: 0.5rem; margin-top: 1rem; display: none; }
-            nav ul.show { display: flex; }
-            .mobile-menu-btn { display: block; position: absolute; right: 1.5rem; top: 1rem; }
-            .hero { padding: 5rem 0; }
-            .hero h1 { font-size: 2.25rem; }
-            .hero p { font-size: 1.1rem; }
-            .hero-buttons { flex-direction: column; align-items: center; }
-            .stats-container { gap: 1.5rem; }
-            .search-filters { grid-template-columns: 1fr; }
-            .form-card { padding: 2rem; }
-            .footer-content { grid-template-columns: 1fr; text-align: center; }
-            .footer-col h4:after { left: 50%; transform: translateX(-50%); }
-            .contact-form { padding: 1.5rem; }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                right: 1.5rem;
+                top: 1rem;
+            }
+
+            .hero {
+                padding: 5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats-container {
+                gap: 1.5rem;
+            }
+
+            .search-filters {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-col h4:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
         }
 
         @media (max-width: 576px) {
-            .section-title { font-size: 1.75rem; }
-            .hero h1 { font-size: 2rem; }
-            .teacher-list { grid-template-columns: 1fr; }
-            .tabs { flex-direction: column; width: 100%; }
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .teacher-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+                width: 100%;
+            }
         }
 
         /* New styles for multi-select and tags */
@@ -1066,6 +1164,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <div class="container header-content">
@@ -1094,7 +1193,8 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Connecter les Familles aux Meilleurs Enseignants</h1>
-            <p>Trouvez l'aide scolaire parfaite pour votre enfant ou proposez vos services d'enseignement en toute simplicité.</p>
+            <p>Trouvez l'aide scolaire parfaite pour votre enfant ou proposez vos services d'enseignement en toute
+                simplicité.</p>
             <div class="hero-buttons">
                 <a href="#teachers" class="btn btn-accent">
                     <i class="fas fa-search"></i> Trouver un enseignant
@@ -1126,21 +1226,24 @@
     <section id="home" class="light scroll-target">
         <div class="container">
             <h2 class="section-title">Comment ça fonctionne ?</h2>
-            <p class="section-subtitle">Une plateforme simple et transparente pour connecter directement parents et enseignants, sans intermédiaire coûteux.</p>
+            <p class="section-subtitle">Une plateforme simple et transparente pour connecter directement parents et
+                enseignants, sans intermédiaire coûteux.</p>
             <div class="grid-3">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <h3>1. Recherchez</h3>
-                    <p>Trouvez un enseignant qualifié par matière, ville et budget. Consultez les profils détaillés et les avis.</p>
+                    <p>Trouvez un enseignant qualifié par matière, ville et budget. Consultez les profils détaillés et
+                        les avis.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>2. Contactez</h3>
-                    <p>Envoyez une demande de contact pour 5€. Le paiement n'est validé que si l'enseignant accepte votre demande.</p>
+                    <p>Envoyez une demande de contact pour 5€. Le paiement n'est validé que si l'enseignant accepte
+                        votre demande.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1156,7 +1259,8 @@
     <section id="teachers" class="scroll-target">
         <div class="container">
             <h2 class="section-title">Trouvez votre enseignant</h2>
-            <p class="section-subtitle">Parcourez notre sélection d'enseignants qualifiés et expérimentés, prêts à accompagner votre enfant vers la réussite.</p>
+            <p class="section-subtitle">Parcourez notre sélection d'enseignants qualifiés et expérimentés, prêts à
+                accompagner votre enfant vers la réussite.</p>
             <div class="search-filters">
                 <div class="filter-group">
                     <label for="searchSubject">Matière</label>
@@ -1193,32 +1297,36 @@
             </div>
         </div>
     </section>
-    
+
     <section id="about" class="light scroll-target">
         <div class="container text-center">
             <h2 class="section-title">À propos de MyProfEduc</h2>
-            <p class="section-subtitle">Notre mission est de rendre l'éducation de qualité accessible à tous en connectant directement parents et enseignants.</p>
+            <p class="section-subtitle">Notre mission est de rendre l'éducation de qualité accessible à tous en
+                connectant directement parents et enseignants.</p>
             <div class="grid-3">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-euro-sign"></i>
                     </div>
                     <h3>Économies garanties</h3>
-                    <p>En supprimant les intermédiaires, nous réduisons les coûts de 30% en moyenne pour les familles, tout en augmentant les revenus des enseignants.</p>
+                    <p>En supprimant les intermédiaires, nous réduisons les coûts de 30% en moyenne pour les familles,
+                        tout en augmentant les revenus des enseignants.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Sécurité et confiance</h3>
-                    <p>Tous nos enseignants sont vérifiés et leurs diplômes authentifiés. Un système d'avis transparent garantit la qualité des cours.</p>
+                    <p>Tous nos enseignants sont vérifiés et leurs diplômes authentifiés. Un système d'avis transparent
+                        garantit la qualité des cours.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <h3>Approche humaine</h3>
-                    <p>Notre équipe est à votre écoute pour vous aider à trouver l'enseignant parfait qui correspond aux besoins spécifiques de votre enfant.</p>
+                    <p>Notre équipe est à votre écoute pour vous aider à trouver l'enseignant parfait qui correspond aux
+                        besoins spécifiques de votre enfant.</p>
                 </div>
             </div>
         </div>
@@ -1228,25 +1336,28 @@
     <section id="contact" class="light scroll-target">
         <div class="container">
             <h2 class="section-title">Contactez-nous</h2>
-            <p class="section-subtitle">Une question, un problème ou une suggestion ? Notre équipe vous répond sous 24h.</p>
-            
+            <p class="section-subtitle">Une question, un problème ou une suggestion ? Notre équipe vous répond sous 24h.
+            </p>
+
             <div class="contact-form">
                 <form action="https://formsubmit.co/myprofeduc@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="Nouveau message MyProfEduc">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://myprofeduc.netlify.app/merci.html">
-                    
+
                     <div class="form-group">
                         <label for="contactName">Votre nom complet</label>
-                        <input type="text" id="contactName" name="name" class="form-control" placeholder="Votre nom et prénom" required>
+                        <input type="text" id="contactName" name="name" class="form-control"
+                            placeholder="Votre nom et prénom" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="contactEmail">Votre email</label>
-                        <input type="email" id="contactEmail" name="email" class="form-control" placeholder="votre@email.com" required>
+                        <input type="email" id="contactEmail" name="email" class="form-control"
+                            placeholder="votre@email.com" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="contactReason">Sujet du message</label>
                         <select id="contactReason" name="reason" class="form-control" required>
@@ -1260,22 +1371,23 @@
                             <option value="other">Autre</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="contactMessage">Votre message</label>
-                        <textarea id="contactMessage" name="message" class="form-control" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+                        <textarea id="contactMessage" name="message" class="form-control" rows="6"
+                            placeholder="Décrivez votre demande en détail..." required></textarea>
                     </div>
-                    
+
                     <button type="submit" class="btn btn-primary" style="width: 100%;">
                         <i class="fas fa-paper-plane"></i> Envoyer mon message
                     </button>
-                    
+
                     <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
                         <i class="fas fa-shield-alt"></i> Vos données sont protégées et ne seront jamais partagées
                     </p>
                 </form>
             </div>
-            
+
             <div class="text-center" style="margin-top: 3rem;">
                 <div style="background: var(--light-bg); padding: 2rem; border-radius: var(--border-radius);">
                     <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Autres moyens de contact</h4>
@@ -1290,8 +1402,9 @@
     <section id="faq" class="light scroll-target">
         <div class="container">
             <h2 class="section-title">Questions Fréquentes</h2>
-            <p class="section-subtitle">Trouvez rapidement des réponses aux questions les plus courantes sur notre plateforme.</p>
-            
+            <p class="section-subtitle">Trouvez rapidement des réponses aux questions les plus courantes sur notre
+                plateforme.</p>
+
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
@@ -1299,37 +1412,48 @@
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Pour contacter un enseignant, il vous suffit de cliquer sur le bouton "Contacter" présent sur son profil. Vous serez alors redirigé vers un formulaire de contact. Un paiement de 5€ est requis pour débloquer les coordonnées de l'enseignant. Ce montant n'est prélevé que si l'enseignant accepte votre demande.</p>
+                        <p>Pour contacter un enseignant, il vous suffit de cliquer sur le bouton "Contacter" présent sur
+                            son profil. Vous serez alors redirigé vers un formulaire de contact. Un paiement de 5€ est
+                            requis pour débloquer les coordonnées de l'enseignant. Ce montant n'est prélevé que si
+                            l'enseignant accepte votre demande.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Comment devenir enseignant sur MyProfEduc ?</span>
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Pour devenir enseignant, rendez-vous dans la section "Devenir enseignant" et remplissez le formulaire d'inscription. Vous devrez fournir des informations sur vos qualifications, expériences et les matières que vous souhaitez enseigner. Notre équipe vérifiera votre profil sous 48h avant activation.</p>
+                        <p>Pour devenir enseignant, rendez-vous dans la section "Devenir enseignant" et remplissez le
+                            formulaire d'inscription. Vous devrez fournir des informations sur vos qualifications,
+                            expériences et les matières que vous souhaitez enseigner. Notre équipe vérifiera votre
+                            profil sous 48h avant activation.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Quelles sont les conditions d'annulation ?</span>
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Vous pouvez annuler un cours sans frais jusqu'à 24h à l'avance. En cas d'annulation moins de 24h avant le cours, l'enseignant peut percevoir une indemnité correspondant à 50% du prix du cours. En cas d'absence non justifiée, le cours sera facturé intégralement.</p>
+                        <p>Vous pouvez annuler un cours sans frais jusqu'à 24h à l'avance. En cas d'annulation moins de
+                            24h avant le cours, l'enseignant peut percevoir une indemnité correspondant à 50% du prix du
+                            cours. En cas d'absence non justifiée, le cours sera facturé intégralement.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <span>Comment sont sélectionnés les enseignants ?</span>
                         <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Tous nos enseignants sont rigoureusement sélectionnés. Nous vérifions leurs diplômes, expériences et compétences pédagogiques. Seuls les profils répondant à nos critères de qualité sont acceptés sur la plateforme. De plus, le système d'avis permet aux parents de partager leur expérience.</p>
+                        <p>Tous nos enseignants sont rigoureusement sélectionnés. Nous vérifions leurs diplômes,
+                            expériences et compétences pédagogiques. Seuls les profils répondant à nos critères de
+                            qualité sont acceptés sur la plateforme. De plus, le système d'avis permet aux parents de
+                            partager leur expérience.</p>
                     </div>
                 </div>
             </div>
@@ -1340,33 +1464,36 @@
     <section id="registration" class="scroll-target">
         <div class="container">
             <h2 class="section-title">Rejoignez-nous</h2>
-            <p class="section-subtitle">Inscrivez-vous en tant qu'enseignant ou parent pour profiter de tous les avantages de notre plateforme.</p>
-            
+            <p class="section-subtitle">Inscrivez-vous en tant qu'enseignant ou parent pour profiter de tous les
+                avantages de notre plateforme.</p>
+
             <div class="tabs">
                 <button class="tab-btn active" onclick="showTab('teacher-register')">Enseignant</button>
                 <button class="tab-btn" onclick="showTab('parent-register')">Parent</button>
             </div>
-            
+
             <div id="teacher-register" class="form-card">
                 <h3>Inscription Enseignant</h3>
                 <div class="photo-upload">
-                    <img src="https://via.placeholder.com/150" alt="Photo de profil" class="profile-photo" id="teacherPhotoPreview">
+                    <img src="https://via.placeholder.com/150" alt="Photo de profil" class="profile-photo"
+                        id="teacherPhotoPreview">
                     <label for="teacherPhoto" class="photo-upload-btn">
                         <i class="fas fa-camera"></i> Ajouter une photo
                     </label>
-                    <input type="file" id="teacherPhoto" accept="image/*" style="display: none;" onchange="previewTeacherPhoto(event)">
+                    <input type="file" id="teacherPhoto" accept="image/*" style="display: none;"
+                        onchange="previewTeacherPhoto(event)">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherName">Nom complet</label>
                     <input type="text" id="teacherName" placeholder="Votre nom et prénom">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherEmail">Email</label>
                     <input type="email" id="teacherEmail" placeholder="Votre adresse email">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherPassword">Mot de passe</label>
                     <input type="password" id="teacherPassword" placeholder="Créez un mot de passe sécurisé">
@@ -1382,12 +1509,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherConfirmPassword">Confirmer le mot de passe</label>
                     <input type="password" id="teacherConfirmPassword" placeholder="Confirmez votre mot de passe">
                 </div>
-                
+
                 <div class="form-group">
                     <label>Matières enseignées</label>
                     <div class="tags-container" id="teacherSubjects"></div>
@@ -1396,7 +1523,7 @@
                         <button class="btn btn-primary" onclick="addSubject()">Ajouter</button>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label>Diplômes</label>
                     <div class="tags-container" id="teacherDegrees"></div>
@@ -1405,7 +1532,7 @@
                         <button class="btn btn-primary" onclick="addDegree()">Ajouter</button>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherCity">Ville</label>
                     <select id="teacherCity">
@@ -1413,40 +1540,40 @@
                         <!-- Les villes seront ajoutées dynamiquement -->
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherExperience">Années d'expérience</label>
                     <input type="number" id="teacherExperience" min="0" placeholder="Nombre d'années d'expérience">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherRate">Tarif horaire (€)</label>
                     <input type="number" id="teacherRate" min="0" placeholder="Ex: 25">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="teacherBio">Présentation</label>
                     <textarea id="teacherBio" rows="4" placeholder="Présentez-vous en quelques lignes..."></textarea>
                 </div>
-                
+
                 <button class="btn btn-primary" onclick="registerTeacher()">
                     <i class="fas fa-user-plus"></i> S'inscrire
                 </button>
             </div>
-            
+
             <div id="parent-register" class="form-card" style="display: none;">
                 <h3>Inscription Parent</h3>
-                
+
                 <div class="form-group">
                     <label for="parentName">Nom complet</label>
                     <input type="text" id="parentName" placeholder="Votre nom et prénom">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="parentEmail">Email</label>
                     <input type="email" id="parentEmail" placeholder="Votre adresse email">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="parentPassword">Mot de passe</label>
                     <input type="password" id="parentPassword" placeholder="Créez un mot de passe sécurisé">
@@ -1455,29 +1582,30 @@
                             <li id="parentLengthValidation"><i class="fas fa-times"></i> Au moins 8 caractères</li>
                             <li id="parentUppercaseValidation"><i class="fas fa-times"></i> Au moins une majuscule</li>
                             <li id="parentNumberValidation"><i class="fas fa-times"></i> Au moins un chiffre</li>
-                            <li id="parentSpecialValidation"><i class="fas fa-times"></i> Au moins un caractère spécial</li>
+                            <li id="parentSpecialValidation"><i class="fas fa-times"></i> Au moins un caractère spécial
+                            </li>
                         </ul>
                         <div class="password-strength-bar">
                             <div class="strength" id="parentPasswordStrength"></div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="parentConfirmPassword">Confirmer le mot de passe</label>
                     <input type="password" id="parentConfirmPassword" placeholder="Confirmez votre mot de passe">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="childName">Nom de l'enfant</label>
                     <input type="text" id="childName" placeholder="Nom et prénom de votre enfant">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="childAge">Âge de l'enfant</label>
                     <input type="number" id="childAge" min="5" max="18" placeholder="Âge de votre enfant">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="childGrade">Niveau scolaire</label>
                     <select id="childGrade">
@@ -1496,7 +1624,7 @@
                         <option value="Terminale">Terminale</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="parentCity">Ville</label>
                     <select id="parentCity">
@@ -1504,7 +1632,7 @@
                         <!-- Les villes seront ajoutées dynamiquement -->
                     </select>
                 </div>
-                
+
                 <button class="btn btn-primary" onclick="registerParent()">
                     <i class="fas fa-user-plus"></i> S'inscrire
                 </button>
@@ -1520,8 +1648,10 @@
                     <i class="fas fa-envelope"></i>
                 </div>
                 <h3>Vérifiez votre email</h3>
-                <p>Nous avons envoyé un lien de vérification à votre adresse email. Veuillez cliquer sur ce lien pour activer votre compte.</p>
-                <p>Si vous n'avez pas reçu l'email, vérifiez votre dossier spam ou <a href="#" onclick="resendVerification()">renvoyer l'email</a>.</p>
+                <p>Nous avons envoyé un lien de vérification à votre adresse email. Veuillez cliquer sur ce lien pour
+                    activer votre compte.</p>
+                <p>Si vous n'avez pas reçu l'email, vérifiez votre dossier spam ou <a href="#"
+                        onclick="resendVerification()">renvoyer l'email</a>.</p>
             </div>
         </div>
     </section>
@@ -1534,14 +1664,14 @@
                 <button class="profile-tab-btn" onclick="showProfileTab('profile-children')">Mes enfants</button>
                 <button class="profile-tab-btn" onclick="showProfileTab('profile-bookings')">Réservations</button>
             </div>
-            
+
             <div id="profile-info" class="profile-content active">
                 <div class="form-card">
                     <h3>Mon Profil</h3>
                     <div id="profileContent"></div>
                 </div>
             </div>
-            
+
             <div id="profile-children" class="profile-content">
                 <div class="form-card">
                     <h3>Mes Enfants</h3>
@@ -1551,7 +1681,7 @@
                     <div class="children-list" id="childrenList"></div>
                 </div>
             </div>
-            
+
             <div id="profile-bookings" class="profile-content">
                 <div class="form-card">
                     <h3>Mes Réservations</h3>
@@ -1575,7 +1705,8 @@
                 <input type="password" id="loginPassword" placeholder="Votre mot de passe">
             </div>
             <button class="btn btn-primary" onclick="login()">Se connecter</button>
-            <p style="margin-top: 1rem;">Pas encore inscrit ? <a href="#registration" onclick="closeLoginModal()">Créer un compte</a></p>
+            <p style="margin-top: 1rem;">Pas encore inscrit ? <a href="#registration" onclick="closeLoginModal()">Créer
+                    un compte</a></p>
         </div>
     </div>
 
@@ -1619,10 +1750,12 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>MyProfEduc</h4>
-                    <p>La plateforme qui connecte directement les familles avec les meilleurs enseignants pour un soutien scolaire personnalisé et abordable.</p>
+                    <p>La plateforme qui connecte directement les familles avec les meilleurs enseignants pour un
+                        soutien scolaire personnalisé et abordable.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/myprofeduc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/myprofeduc/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                         <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
@@ -1641,9 +1774,9 @@
                     <h4>Support</h4>
                     <div class="footer-links">
                         <a href="#contact">Contact</a>
-                        <a href="#">Centre d'aide</a>
-                        <a href="#">Conditions d'utilisation</a>
-                        <a href="#">Politique de confidentialité</a>
+                        <a href="#faq">Centre d'aide</a>
+                        <a href="#" onclick="openConditionsModal()">Conditions d'utilisation</a>
+                        <a href="#" onclick="openPrivacyModal()">Politique de confidentialité</a>
                     </div>
                 </div>
             </div>
@@ -1653,6 +1786,83 @@
             </div>
         </div>
     </footer>
+    <div id="conditionsModal" class="modal">
+        <div class="modal-content" style="max-width: 700px; max-height: 80vh; overflow-y: auto;">
+            <button class="modal-close" onclick="closeConditionsModal()">&times;</button>
+            <h3>Conditions d'utilisation</h3>
+            <div style="text-align: left;">
+                <h4>1. Acceptation des conditions</h4>
+                <p>En utilisant MyProfEduc, vous acceptez les présentes conditions d'utilisation.</p>
+
+                <h4>2. Description du service</h4>
+                <p>MyProfEduc est une plateforme de mise en relation entre enseignants et parents pour des cours
+                    particuliers.</p>
+
+                <h4>3. Inscription et compte</h4>
+                <p>Vous devez fournir des informations exactes et maintenir la confidentialité de votre compte.</p>
+
+                <h4>4. Responsabilités des enseignants</h4>
+                <p>Les enseignants s'engagent à fournir des services professionnels et à respecter les horaires
+                    convenus.</p>
+
+                <h4>5. Responsabilités des parents</h4>
+                <p>Les parents s'engagent à payer les cours selon les tarifs convenus et à respecter les annulations.
+                </p>
+
+                <h4>6. Paiements et frais</h4>
+                <p>Les paiements sont sécurisés via notre plateforme. Des frais de service de 5€ s'appliquent pour la
+                    mise en relation.</p>
+
+                <h4>7. Propriété intellectuelle</h4>
+                <p>Le contenu de la plateforme est protégé par le droit d'auteur.</p>
+
+                <h4>8. Résiliation</h4>
+                <p>Nous nous réservons le droit de résilier les comptes ne respectant pas nos conditions.</p>
+
+                <h4>9. Contact</h4>
+                <p>Pour toute question : myprofeduc@gmail.com</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeConditionsModal()" style="margin-top: 1rem;">J'ai
+                compris</button>
+        </div>
+    </div>
+
+    <!-- Modal Politique de confidentialité -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content" style="max-width: 700px; max-height: 80vh; overflow-y: auto;">
+            <button class="modal-close" onclick="closePrivacyModal()">&times;</button>
+            <h3>Politique de confidentialité</h3>
+            <div style="text-align: left;">
+                <h4>1. Données collectées</h4>
+                <p>Nous collectons : nom, email, téléphone, informations de profil, données de paiement.</p>
+
+                <h4>2. Utilisation des données</h4>
+                <p>Vos données sont utilisées pour : la mise en relation, le traitement des paiements, l'amélioration du
+                    service.</p>
+
+                <h4>3. Partage des données</h4>
+                <p>Nous ne vendons pas vos données. Elles sont partagées uniquement entre enseignants et parents pour
+                    l'organisation des cours.</p>
+
+                <h4>4. Sécurité</h4>
+                <p>Nous utilisons le cryptage SSL pour protéger vos données.</p>
+
+                <h4>5. Vos droits</h4>
+                <p>Vous pouvez accéder, modifier ou supprimer vos données en nous contactant.</p>
+
+                <h4>6. Cookies</h4>
+                <p>Nous utilisons des cookies pour améliorer l'expérience utilisateur.</p>
+
+                <h4>7. Conservation</h4>
+                <p>Vos données sont conservées pendant 3 ans après la dernière activité.</p>
+
+                <h4>8. Contact RGPD</h4>
+                <p>myprofeduc@gmail.com</p>
+            </div>
+            <button class="btn btn-primary" onclick="closePrivacyModal()" style="margin-top: 1rem;">J'ai
+                compris</button>
+        </div>
+    </div>
 
     <script>
         // Données des enseignants
@@ -1738,7 +1948,7 @@
         ];
 
         // CORRECTION : Navigation fluide pour tous les liens d'ancrage
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Smooth scroll pour tous les liens d'ancrage
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -1761,15 +1971,15 @@
         function renderTeachers(teachersToRender) {
             const teacherList = document.getElementById('teacherList');
             teacherList.innerHTML = '';
-            
+
             if (teachersToRender.length === 0) {
                 teacherList.innerHTML = '<div class="text-center" style="grid-column: 1/-1; padding: 2rem;">Aucun enseignant ne correspond à vos critères de recherche.</div>';
                 return;
             }
-            
+
             teachersToRender.forEach(teacher => {
                 const stars = '★'.repeat(Math.floor(teacher.rating)) + '☆'.repeat(5 - Math.floor(teacher.rating));
-                
+
                 const teacherCard = document.createElement('div');
                 teacherCard.className = 'teacher-card';
                 teacherCard.innerHTML = `
@@ -1803,7 +2013,7 @@
                         </button>
                     </div>
                 `;
-                
+
                 teacherList.appendChild(teacherCard);
             });
         }
@@ -1813,13 +2023,13 @@
             const subject = document.getElementById('searchSubject').value;
             const city = document.getElementById('searchCity').value;
             const maxPrice = document.getElementById('maxPrice').value;
-            
+
             const filteredTeachers = teachers.filter(teacher => {
                 return (!subject || teacher.subject === subject) &&
-                       (!city || teacher.city === city) &&
-                       (!maxPrice || teacher.rate <= parseInt(maxPrice));
+                    (!city || teacher.city === city) &&
+                    (!maxPrice || teacher.rate <= parseInt(maxPrice));
             });
-            
+
             renderTeachers(filteredTeachers);
         }
 
@@ -1835,7 +2045,7 @@
                 document.getElementById('teacherCity'),
                 document.getElementById('parentCity')
             ];
-            
+
             citySelects.forEach(select => {
                 if (select) {
                     frenchCities.forEach(city => {
@@ -1853,10 +2063,10 @@
             document.getElementById('teacher-register').style.display = 'none';
             document.getElementById('parent-register').style.display = 'none';
             document.getElementById(tabId).style.display = 'block';
-            
+
             const tabButtons = document.querySelectorAll('.tab-btn');
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             event.target.classList.add('active');
         }
 
@@ -1864,7 +2074,7 @@
         function addSubject() {
             const subjectInput = document.getElementById('newSubject');
             const subject = subjectInput.value.trim();
-            
+
             if (subject) {
                 const tagsContainer = document.getElementById('teacherSubjects');
                 const tag = document.createElement('div');
@@ -1884,7 +2094,7 @@
         function addDegree() {
             const degreeInput = document.getElementById('newDegree');
             const degree = degreeInput.value.trim();
-            
+
             if (degree) {
                 const tagsContainer = document.getElementById('teacherDegrees');
                 const tag = document.createElement('div');
@@ -1903,7 +2113,7 @@
         // Fonction pour prévisualiser la photo de l'enseignant
         function previewTeacherPhoto(event) {
             const reader = new FileReader();
-            reader.onload = function() {
+            reader.onload = function () {
                 const output = document.getElementById('teacherPhotoPreview');
                 output.src = reader.result;
             };
@@ -1916,22 +2126,22 @@
             const hasUppercase = /[A-Z]/.test(password);
             const hasNumber = /[0-9]/.test(password);
             const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-            
+
             if (validationPrefix) {
                 document.getElementById(`${validationPrefix}lengthValidation`).className = hasLength ? 'valid' : '';
                 document.getElementById(`${validationPrefix}uppercaseValidation`).className = hasUppercase ? 'valid' : '';
                 document.getElementById(`${validationPrefix}numberValidation`).className = hasNumber ? 'valid' : '';
                 document.getElementById(`${validationPrefix}specialValidation`).className = hasSpecial ? 'valid' : '';
-                
+
                 const strengthBar = document.getElementById(`${validationPrefix}passwordStrength`);
                 let strength = 0;
                 let strengthClass = '';
-                
+
                 if (hasLength) strength += 25;
                 if (hasUppercase) strength += 25;
                 if (hasNumber) strength += 25;
                 if (hasSpecial) strength += 25;
-                
+
                 if (strength < 50) {
                     strengthClass = '';
                 } else if (strength < 75) {
@@ -1939,11 +2149,11 @@
                 } else {
                     strengthClass = 'strong';
                 }
-                
+
                 strengthBar.style.width = `${strength}%`;
                 strengthBar.className = `strength ${strengthClass}`;
             }
-            
+
             return hasLength && hasUppercase && hasNumber && hasSpecial;
         }
 
@@ -1957,39 +2167,39 @@
             const experience = document.getElementById('teacherExperience').value;
             const rate = document.getElementById('teacherRate').value;
             const bio = document.getElementById('teacherBio').value;
-            
+
             // Validation basique
             if (!name || !email || !password || !confirmPassword || !city || !experience || !rate || !bio) {
                 alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
-            
+
             if (password !== confirmPassword) {
                 alert('Les mots de passe ne correspondent pas.');
                 return;
             }
-            
+
             if (!validatePassword(password)) {
                 alert('Le mot de passe ne respecte pas les critères de sécurité.');
                 return;
             }
-            
+
             // Récupérer les matières et diplômes
             const subjects = Array.from(document.getElementById('teacherSubjects').querySelectorAll('.tag'))
                 .map(tag => tag.textContent.replace('×', '').trim());
-                
+
             const degrees = Array.from(document.getElementById('teacherDegrees').querySelectorAll('.tag'))
                 .map(tag => tag.textContent.replace('×', '').trim());
-            
+
             if (subjects.length === 0) {
                 alert('Veuillez ajouter au moins une matière.');
                 return;
             }
-            
+
             // Simulation d'enregistrement réussi
             document.getElementById('registration').style.display = 'none';
             document.getElementById('verification').style.display = 'block';
-            
+
             // Réinitialiser le formulaire
             document.getElementById('teacher-register').reset();
             document.getElementById('teacherSubjects').innerHTML = '';
@@ -2007,27 +2217,27 @@
             const childAge = document.getElementById('childAge').value;
             const childGrade = document.getElementById('childGrade').value;
             const city = document.getElementById('parentCity').value;
-            
+
             // Validation basique
             if (!name || !email || !password || !confirmPassword || !childName || !childAge || !childGrade || !city) {
                 alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
-            
+
             if (password !== confirmPassword) {
                 alert('Les mots de passe ne correspondent pas.');
                 return;
             }
-            
+
             if (!validatePassword(password, 'parent')) {
                 alert('Le mot de passe ne respecte pas les critères de sécurité.');
                 return;
             }
-            
+
             // Simulation d'enregistrement réussi
             document.getElementById('registration').style.display = 'none';
             document.getElementById('verification').style.display = 'block';
-            
+
             // Réinitialiser le formulaire
             document.getElementById('parent-register').reset();
         }
@@ -2046,17 +2256,17 @@
         function login() {
             const email = document.getElementById('loginEmail').value;
             const password = document.getElementById('loginPassword').value;
-            
+
             if (!email || !password) {
                 alert('Veuillez entrer votre email et mot de passe.');
                 return;
             }
-            
+
             // Simulation de connexion réussie
             document.getElementById('loginNavItem').style.display = 'none';
             document.getElementById('profileNavItem').style.display = 'list-item';
             document.getElementById('logoutNavItem').style.display = 'list-item';
-            
+
             closeLoginModal();
             showProfile();
         }
@@ -2066,7 +2276,7 @@
             document.getElementById('loginNavItem').style.display = 'list-item';
             document.getElementById('profileNavItem').style.display = 'none';
             document.getElementById('logoutNavItem').style.display = 'none';
-            
+
             document.getElementById('profile').style.display = 'none';
             document.getElementById('registration').style.display = 'block';
         }
@@ -2076,7 +2286,7 @@
             document.getElementById('registration').style.display = 'none';
             document.getElementById('verification').style.display = 'none';
             document.getElementById('profile').style.display = 'block';
-            
+
             // Afficher les informations du profil
             document.getElementById('profileContent').innerHTML = `
                 <p><strong>Nom:</strong> Utilisateur MyProfEduc</p>
@@ -2090,11 +2300,11 @@
             document.querySelectorAll('.profile-content').forEach(tab => {
                 tab.classList.remove('active');
             });
-            
+
             document.querySelectorAll('.profile-tab-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            
+
             document.getElementById(tabId).classList.add('active');
             event.target.classList.add('active');
         }
@@ -2114,12 +2324,12 @@
             const name = document.getElementById('addChildName').value;
             const age = document.getElementById('addChildAge').value;
             const grade = document.getElementById('addChildGrade').value;
-            
+
             if (!name || !age || !grade) {
                 alert('Veuillez remplir tous les champs.');
                 return;
             }
-            
+
             const childrenList = document.getElementById('childrenList');
             const childItem = document.createElement('div');
             childItem.className = 'child-item';
@@ -2134,7 +2344,7 @@
                     </button>
                 </div>
             `;
-            
+
             childrenList.appendChild(childItem);
             closeAddChildModal();
         }
@@ -2151,22 +2361,22 @@
         }
 
         // Initialisation au chargement de la page
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Afficher les enseignants
             renderTeachers(teachers);
-            
+
             // Remplir les listes déroulantes des villes
             populateCityDropdowns();
-            
+
             // Configurer la validation des mots de passe
-            document.getElementById('teacherPassword').addEventListener('input', function() {
+            document.getElementById('teacherPassword').addEventListener('input', function () {
                 validatePassword(this.value);
             });
-            
-            document.getElementById('parentPassword').addEventListener('input', function() {
+
+            document.getElementById('parentPassword').addEventListener('input', function () {
                 validatePassword(this.value, 'parent');
             });
-            
+
             // Animation des statistiques
             animateValue('teacherCount', 0, 20025, 2000);
             animateValue('parentCount', 0, 45120, 2000);
@@ -2188,6 +2398,36 @@
             };
             window.requestAnimationFrame(step);
         }
+        // Fonctions pour les modales des conditions et politique de confidentialité
+        function openConditionsModal() {
+            document.getElementById('conditionsModal').style.display = 'flex';
+        }
+
+        function closeConditionsModal() {
+            document.getElementById('conditionsModal').style.display = 'none';
+        }
+
+        function openPrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'flex';
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'none';
+        }
+
+        // Fermer les modales en cliquant à l'extérieur
+        window.onclick = function (event) {
+            const conditionsModal = document.getElementById('conditionsModal');
+            const privacyModal = document.getElementById('privacyModal');
+
+            if (event.target === conditionsModal) {
+                conditionsModal.style.display = 'none';
+            }
+            if (event.target === privacyModal) {
+                privacyModal.style.display = 'none';
+            }
+        }
     </script>
 </body>
+
 </html>
