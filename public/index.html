@@ -30,6 +30,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--light-bg);
@@ -39,6 +43,11 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+        }
+
+        /* CORRECTION : Scroll offset pour la navigation fixe */
+        .scroll-target {
+            scroll-margin-top: 80px;
         }
 
         /* Utility classes */
@@ -1114,7 +1123,7 @@
         </div>
     </section>
 
-    <section id="home" class="light">
+    <section id="home" class="light scroll-target">
         <div class="container">
             <h2 class="section-title">Comment ça fonctionne ?</h2>
             <p class="section-subtitle">Une plateforme simple et transparente pour connecter directement parents et enseignants, sans intermédiaire coûteux.</p>
@@ -1144,7 +1153,7 @@
         </div>
     </section>
 
-    <section id="teachers">
+    <section id="teachers" class="scroll-target">
         <div class="container">
             <h2 class="section-title">Trouvez votre enseignant</h2>
             <p class="section-subtitle">Parcourez notre sélection d'enseignants qualifiés et expérimentés, prêts à accompagner votre enfant vers la réussite.</p>
@@ -1185,7 +1194,7 @@
         </div>
     </section>
     
-    <section id="about" class="light">
+    <section id="about" class="light scroll-target">
         <div class="container text-center">
             <h2 class="section-title">À propos de MyProfEduc</h2>
             <p class="section-subtitle">Notre mission est de rendre l'éducation de qualité accessible à tous en connectant directement parents et enseignants.</p>
@@ -1216,7 +1225,7 @@
     </section>
 
     <!-- NOUVELLE SECTION CONTACT AVEC FORMULAIRE FONCTIONNEL -->
-    <section id="contact" class="light">
+    <section id="contact" class="light scroll-target">
         <div class="container">
             <h2 class="section-title">Contactez-nous</h2>
             <p class="section-subtitle">Une question, un problème ou une suggestion ? Notre équipe vous répond sous 24h.</p>
@@ -1226,6 +1235,7 @@
                     <input type="hidden" name="_subject" value="Nouveau message MyProfEduc">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://myprofeduc.netlify.app/merci.html">
                     
                     <div class="form-group">
                         <label for="contactName">Votre nom complet</label>
@@ -1277,7 +1287,7 @@
         </div>
     </section>
 
-    <section id="faq" class="light">
+    <section id="faq" class="light scroll-target">
         <div class="container">
             <h2 class="section-title">Questions Fréquentes</h2>
             <p class="section-subtitle">Trouvez rapidement des réponses aux questions les plus courantes sur notre plateforme.</p>
@@ -1327,7 +1337,7 @@
     </section>
 
     <!-- Registration Section -->
-    <section id="registration">
+    <section id="registration" class="scroll-target">
         <div class="container">
             <h2 class="section-title">Rejoignez-nous</h2>
             <p class="section-subtitle">Inscrivez-vous en tant qu'enseignant ou parent pour profiter de tous les avantages de notre plateforme.</p>
@@ -1726,6 +1736,26 @@
             "Paris", "Marseille", "Lyon", "Toulouse", "Nice", "Nantes", "Strasbourg", "Montpellier", "Bordeaux", "Lille",
             "Rennes", "Reims", "Le Havre", "Saint-Étienne", "Toulon", "Grenoble", "Dijon", "Angers", "Nîmes", "Villeurbanne"
         ];
+
+        // CORRECTION : Navigation fluide pour tous les liens d'ancrage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll pour tous les liens d'ancrage
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
 
         // Fonction pour afficher les enseignants
         function renderTeachers(teachersToRender) {
